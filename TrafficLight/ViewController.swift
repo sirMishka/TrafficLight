@@ -9,11 +9,39 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var redLightView: UIView!
+    @IBOutlet var yellowLightView: UIView!
+    @IBOutlet var greenLightView: UIView!
+    
+    let lightIsOn = CGFloat(1)
+    let lightIsOff = CGFloat(0.3)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        
+    }
+    
+    override func viewWillLayoutSubviews() {
+        redLightView.layer.cornerRadius = redLightView.frame.height / 2
+        yellowLightView.layer.cornerRadius = yellowLightView.frame.height / 2
+        greenLightView.layer.cornerRadius = greenLightView.frame.height / 2
     }
 
-
+    @IBAction func startButtonPressed(_ sender: UIButton) {
+        sender.setTitle("Next", for: .normal)
+        
+        if redLightView.alpha == yellowLightView.alpha {
+            greenLightView.alpha = lightIsOff
+            redLightView.alpha = lightIsOn
+        } else if redLightView.alpha == lightIsOn {
+            redLightView.alpha = lightIsOff
+            yellowLightView.alpha = lightIsOn
+        } else if yellowLightView.alpha == lightIsOn {
+            yellowLightView.alpha = lightIsOff
+            greenLightView.alpha = lightIsOn
+        }
+    }
+    
 }
 

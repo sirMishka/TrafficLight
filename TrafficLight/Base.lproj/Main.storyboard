@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="HOG-Kc-RRV">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="HOG-Kc-RRV">
                                 <rect key="frame" x="110" y="50" width="100" height="370"/>
                                 <subviews>
                                     <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEn-3m-7AX">
@@ -33,15 +33,9 @@
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                     </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="SRk-DL-U26" firstAttribute="centerY" secondItem="HOG-Kc-RRV" secondAttribute="centerY" id="vcA-Bh-fP5"/>
-                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hV-9r-vC6">
-                                <rect key="frame" x="87.5" y="483" width="145" height="38"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="145" id="aVr-3F-GQC"/>
-                                </constraints>
+                                <rect key="frame" x="136" y="485" width="48" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Start"/>
@@ -53,13 +47,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="5hV-9r-vC6" firstAttribute="top" secondItem="HOG-Kc-RRV" secondAttribute="bottom" constant="63" id="C9o-zu-Ki0"/>
-                            <constraint firstItem="5hV-9r-vC6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CJH-eq-Eyk"/>
-                            <constraint firstItem="HOG-Kc-RRV" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.651408" id="MZF-zh-abV"/>
-                            <constraint firstItem="HOG-Kc-RRV" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="25:142" id="Sr8-gk-qO8"/>
-                            <constraint firstItem="HOG-Kc-RRV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="ha0-WZ-npL"/>
-                            <constraint firstItem="HOG-Kc-RRV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mQJ-Qi-kd8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5hV-9r-vC6" secondAttribute="bottom" constant="47" id="xhp-mR-mbj"/>
+                            <constraint firstItem="HOG-Kc-RRV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GOA-N1-fTH"/>
+                            <constraint firstItem="HOG-Kc-RRV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="LZn-Sc-rU8"/>
+                            <constraint firstItem="HOG-Kc-RRV" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="25:142" id="Yce-kX-gKn"/>
+                            <constraint firstItem="5hV-9r-vC6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hKH-aB-Bse"/>
+                            <constraint firstItem="HOG-Kc-RRV" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.651408" id="lGA-P0-30k"/>
+                            <constraint firstItem="5hV-9r-vC6" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="6:71" id="sUC-vT-2jq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5hV-9r-vC6" secondAttribute="bottom" constant="47" id="u6y-GB-Aqm"/>
                         </constraints>
                     </view>
                     <connections>

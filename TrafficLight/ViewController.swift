@@ -12,8 +12,8 @@ class ViewController: UIViewController {
     @IBOutlet var yellowLightView: UIView!
     @IBOutlet var greenLightView: UIView!
     
-    private let lightIsOn = CGFloat(1)
-    private let lightIsOff = CGFloat(0.3)
+    private let lightIsOn: CGFloat = 1
+    private let lightIsOff: CGFloat = 0.3
     
     override func viewWillLayoutSubviews() {
         redLightView.layer.cornerRadius = redLightView.frame.width / 2

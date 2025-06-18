@@ -7,6 +7,10 @@
 
 import UIKit
 
+enum CurrentLight {
+    case red, yellow, green
+}
+
 class ViewController: UIViewController {
     @IBOutlet var redLightView: UIView!
     @IBOutlet var yellowLightView: UIView!
@@ -14,6 +18,7 @@ class ViewController: UIViewController {
     
     private let lightIsOn: CGFloat = 1
     private let lightIsOff: CGFloat = 0.3
+    private var currentLight = CurrentLight.red
     
     override func viewWillLayoutSubviews() {
         redLightView.layer.cornerRadius = redLightView.frame.width / 2
@@ -24,15 +29,30 @@ class ViewController: UIViewController {
     @IBAction func startButtonPressed(_ sender: UIButton) {
         sender.setTitle("Next", for: .normal)
         
-        if redLightView.alpha == yellowLightView.alpha {
+//        if redLightView.alpha == yellowLightView.alpha {
+//            greenLightView.alpha = lightIsOff
+//            redLightView.alpha = lightIsOn
+//        } else if redLightView.alpha == lightIsOn {
+//            redLightView.alpha = lightIsOff
+//            yellowLightView.alpha = lightIsOn
+//        } else if yellowLightView.alpha == lightIsOn {
+//            yellowLightView.alpha = lightIsOff
+//            greenLightView.alpha = lightIsOn
+//        }
+        
+        switch currentLight {
+        case .red:
             greenLightView.alpha = lightIsOff
             redLightView.alpha = lightIsOn
-        } else if redLightView.alpha == lightIsOn {
+            currentLight = .yellow
+        case .yellow:
             redLightView.alpha = lightIsOff
             yellowLightView.alpha = lightIsOn
-        } else if yellowLightView.alpha == lightIsOn {
+            currentLight = .green
+        case .green:
             yellowLightView.alpha = lightIsOff
             greenLightView.alpha = lightIsOn
+            currentLight = .red
         }
     }
 }

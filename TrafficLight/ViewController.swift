@@ -8,19 +8,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     @IBOutlet var redLightView: UIView!
     @IBOutlet var yellowLightView: UIView!
     @IBOutlet var greenLightView: UIView!
     
-    let lightIsOn = CGFloat(1)
-    let lightIsOff = CGFloat(0.3)
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-    }
+    private let lightIsOn = CGFloat(1)
+    private let lightIsOff = CGFloat(0.3)
     
     override func viewWillLayoutSubviews() {
         redLightView.layer.cornerRadius = redLightView.frame.width / 2
@@ -42,6 +35,5 @@ class ViewController: UIViewController {
             greenLightView.alpha = lightIsOn
         }
     }
-    
 }
 

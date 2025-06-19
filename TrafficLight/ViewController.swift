@@ -27,7 +27,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func startButtonPressed(_ sender: UIButton) {
-        sender.setTitle("Next", for: .normal)
+//        sender.setTitle("Next", for: .normal)
+        
+        if sender.currentTitle == "Start" {
+            sender.setTitle("Next", for: .normal)
+        }
         
 //        if redLightView.alpha == yellowLightView.alpha {
 //            greenLightView.alpha = lightIsOff
